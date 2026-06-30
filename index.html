@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Dr Laiba Siddique</title>
+<meta name="description" content="A premium birthday tribute for Dr Laiba Siddique — future doctor, MDCAT warrior." />
+
+<!-- ===================== FONTS ===================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Jost:wght@300;400;500;600&family=Amiri:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-emblem">
+      <svg viewBox="0 0 100 100" class="preloader-ring">
+        <circle cx="50" cy="50" r="44" />
+      </svg>
+      <span class="preloader-initials">LS</span>
+    </div>
+    <p class="preloader-text">tayyari ho rahi hai&hellip;</p>
+  </div>
+</div>
+
+<!-- ===================== AMBIENT BACKGROUND (floating particles + gradient) ===================== -->
+<div class="ambient" aria-hidden="true">
+  <div class="ambient-gradient"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+</div>
+
+<!-- ===================== FLOATING MUSIC PLAYER ===================== -->
+<div class="music-player" id="musicPlayer">
+  <!-- 🎵 REPLACE MUSIC HERE: change the src below to her favourite track -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-toggle" id="musicToggle" aria-label="Play music">
+    <span class="music-disc">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle></svg>
+    </span>
+  </button>
+  <div class="music-controls" id="musicControls">
+    <button id="playBtn" class="music-btn" aria-label="Play">▶</button>
+    <button id="pauseBtn" class="music-btn" aria-label="Pause">❚❚</button>
+    <button id="muteBtn" class="music-btn" aria-label="Mute">🔇</button>
+  </div>
+</div>
+
+<!-- ===================== PROGRESS BAR ===================== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===================== NAV DOTS ===================== -->
+<nav class="dot-nav" id="dotNav" aria-label="Section navigation">
+  <a href="#hero" class="dot active" data-label="Shuruaat"></a>
+  <a href="#message" class="dot" data-label="Paigham"></a>
+  <a href="#dua" class="dot" data-label="Dua"></a>
+  <a href="#mdcat" class="dot" data-label="MDCAT"></a>
+  <a href="#special" class="dot" data-label="Khaas"></a>
+  <a href="#gallery" class="dot" data-label="Yaadein"></a>
+  <a href="#countdown" class="dot" data-label="Safar"></a>
+  <a href="#final" class="dot" data-label="Akhri Baat"></a>
+</nav>
+
+<main>
+
+  <!-- ===================== 1. HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-frame">
+      <p class="hero-eyebrow reveal">7th July &mdash; Mubarak Din</p>
+      <h1 class="hero-title">
+        <span class="reveal reveal-1">Happy Birthday</span>
+        <span class="hero-name reveal reveal-2">Dr Laiba Siddique</span>
+      </h1>
+      <p class="hero-subtitle reveal reveal-3">
+        Ek soch, ek lagan, aur ek khwaab &mdash; <em>doctor banne ka</em>.<br>
+        Aaj us soul ka din hai jo khamoshi se mehnat karti hai, aur ek din duniya ko jawab degi.
+      </p>
+      <div class="hero-cta reveal reveal-4">
+        <a href="#message" class="btn-glow">
+          <span>Start the Journey</span>
+          <svg viewBox="0 0 24 24" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta reveal reveal-5">
+        <div class="meta-chip"><span class="meta-label">Birthday</span><span class="meta-value">7 July</span></div>
+        <div class="meta-divider"></div>
+        <div class="meta-chip"><span class="meta-label">Next Mission</span><span class="meta-value">MDCAT &middot; 16 Aug</span></div>
+        <div class="meta-divider"></div>
+        <div class="meta-chip"><span class="meta-label">Status</span><span class="meta-value">Future Doctor</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <span></span>
+      <p>scroll</p>
+    </div>
+  </section>
+
+  <!-- ===================== 2. BIRTHDAY MESSAGE ===================== -->
+  <section class="message-section" id="message">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">Paigham &middot; A Letter For You</p>
+      <h2 class="section-title reveal">7 July, Ek Mehnati Rooh Ka Jashn</h2>
+
+      <div class="glass-card message-card reveal">
+        <p class="drop-cap">
+          Laiba, aaj ka din sirf ek tareekh nahi &mdash; yeh us simplicity, sincerity aur
+          discipline ka jashn hai jo tum har roz khamoshi se jeeti ho. Duniya shor machati
+          hai, dikhawe mein jeeti hai &mdash; aur tum chup chaap apni kitabon ke saath baith
+          kar apna kal likhti ho.
+        </p>
+        <p>
+          Tumhari simplicity mein ek khaamoshi hai jo bohot kam logon mein hoti hai &mdash;
+          na shikwa, na dikhawa, sirf nayyat aur niyat ki safai. Tumhari sincerity har us
+          insaan ko mehsoos hoti hai jo tumhare qareeb aata hai. Aur tumhari discipline,
+          woh subah ki azaan se shuru hoti hai aur raat ke aakhri pehar tak chalti hai.
+        </p>
+        <p>
+          Har raat jab duniya so jati hai, tum jaagti rehti ho &mdash; kitaab khol kar,
+          khwaab ko qareeb laate hue. Yeh mehnat zaaya nahi jaati, Laiba. Yeh wohi mehnat
+          hai jo ek din "Dr Laiba Siddique" ke naam ko izzat dilayegi.
+        </p>
+        <p class="message-signoff">
+          Aaj, hum sirf tumhari birthday nahi mana rahe &mdash; hum us future doctor ko
+          salaam kar rahe hain jo tum banne wali ho. Happy Birthday, hardworking soul. 🤍
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. DUA SECTION ===================== -->
+  <section class="dua-section" id="dua">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">Dua &middot; Dil Se</p>
+      <h2 class="section-title reveal">Aapke Liye Ek Khaas Dua</h2>
+      <p class="section-intro reveal">
+        Ya Allah, is mubarak din par apni khaas rehmat is mehnati, sincere aur
+        sabar wali bandi par nazil farma.
+      </p>
+
+      <div class="dua-grid">
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">☾</span>
+          <h3>Khushi &amp; Sukoon</h3>
+          <p>Ya Allah, Laiba ki zindagi mein dayami khushi, qalbi sukoon aur barkat ata farma. Har pareshani ko aasani mein badal de.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">✦</span>
+          <h3>Sehat &amp; Hifazat</h3>
+          <p>Ya Allah, ise tandurusti aur aafiyat de, har bimari aur nazar-e-bad se mehfooz rakh, aur is ki himmat ko hamesha buland rakh.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">❋</span>
+          <h3>MDCAT Mein Kamyaabi</h3>
+          <p>Ya Allah, 16 August ko is ke liye aasaan farma. Har sawaal ka jawab is ke zehan mein roshan kar de, aur ise top ranking ata farma.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">⟡</span>
+          <h3>Confidence &amp; Focus</h3>
+          <p>Ya Allah, is ke dil se har khauf nikal de. Ise apne aap par aitmaad, aur apne kaam par mukammal tawajjo ata farma.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">✶</span>
+          <h3>Sabr &amp; Hosla</h3>
+          <p>Ya Allah, jab raasta mushkil lage, sabr ata farma. Har thakan ke baad naya hosla, aur har raat ke baad roshan subah de.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">❀</span>
+          <h3>Har Qurbani Ka Sila</h3>
+          <p>Ya Allah, is ki har neend, har raat, har mehnat ko apni bargah mein qabool farma, aur is ki har qurbani ko sila ata farma.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">⚝</span>
+          <h3>Mayoosi Se Hifazat</h3>
+          <p>Ya Allah, ise mayoosi aur naumeedi se mehfooz rakh. Har natije se pehle aur baad mein is ka dil mazboot rakh.</p>
+        </div>
+        <div class="dua-card glass-card reveal">
+          <span class="dua-icon">✺</span>
+          <h3>Kamyaab Zindagi</h3>
+          <p>Ya Allah, ise duniya aur aakhirat dono mein kamyaabi de, aur ek qabil, mukhlis aur rehem-dil doctor bana de. Ameen.</p>
+        </div>
+      </div>
+
+      <p class="dua-closing reveal">Ameen, Summa Ameen. 🤲</p>
+    </div>
+  </section>
+
+  <!-- ===================== 4. MDCAT DREAM SECTION ===================== -->
+  <section class="mdcat-section" id="mdcat">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">16 August &middot; The Dream</p>
+      <h2 class="section-title reveal">MDCAT &mdash; Ek Aur Qadam, Doctor Bannay Ki Taraf</h2>
+
+      <div class="mdcat-intro glass-card reveal">
+        <p>
+          Jab duniya so rahi thi, tum jaag rahi thi. Jab logon ne weekend ko rest kiya,
+          tum ne usay revision diya. Har late night, har thaki hui subah, har choota
+          hua get-together &mdash; sab kuch hisaab mein hai. <strong>Allah kabhi bhi
+          mukhlis mehnat zaaya nahi karta.</strong>
+        </p>
+        <p>
+          Tumhare paas ek future doctor ka dil hai &mdash; sabar wala, mehnati, aur
+          sincere. 16 August sirf ek exam nahi &mdash; yeh tumhare us safar ka agla
+          qadam hai jo tum ne barson pehle apne dil mein shuru kiya tha.
+        </p>
+      </div>
+
+      <div class="quote-row">
+        <div class="quote-card reveal">
+          <span class="quote-mark">&ldquo;</span>
+          <p>Apne aap par yaqeen rakho &mdash; jitni mehnat tum ne ki hai, utna hi tum is ke laiq ho.</p>
+        </div>
+        <div class="quote-card reveal">
+          <span class="quote-mark">&ldquo;</span>
+          <p>Allah par bharosa rakho. Wahi behtareen tadbeer karne wala hai.</p>
+        </div>
+        <div class="quote-card reveal">
+          <span class="quote-mark">&ldquo;</span>
+          <p>Confidently chalo &mdash; har raat ki mehnat tumhare saath chal rahi hai.</p>
+        </div>
+        <div class="quote-card reveal">
+          <span class="quote-mark">&ldquo;</span>
+          <p>Tumhari kahani abhi shuru hui hai, Dr Laiba Siddique &mdash; aur yeh kahani shaandar hogi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. WHY YOU ARE SPECIAL ===================== -->
+  <section class="special-section" id="special">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">Khaas Baatein</p>
+      <h2 class="section-title reveal">Why You Are Special</h2>
+
+      <div class="special-grid">
+        <article class="special-card glass-card reveal">
+          <span class="special-num">01</span>
+          <h3>Simplicity</h3>
+          <p>Bina dikhawe ke jeena, sab se khaas baat hai. Tumhari simplicity hi tumhari pehchaan hai.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">02</span>
+          <h3>Kindness</h3>
+          <p>Tumhara dil itna naram hai ke har koi tumhare qareeb sukoon mehsoos karta hai.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">03</span>
+          <h3>Discipline</h3>
+          <p>Routine, waqt ki pabandi, aur mustaqil mizaji &mdash; yeh tumhari sab se badi taqat hai.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">04</span>
+          <h3>Hardworking Nature</h3>
+          <p>Tum thakti ho, magar rukti nahi. Yehi cheez tumhe baqi sab se mukhtalif banati hai.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">05</span>
+          <h3>Resilience</h3>
+          <p>Har mushkil ke baad tum dobara khari hoti ho &mdash; aur pehle se zyada mazboot.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">06</span>
+          <h3>Ambition</h3>
+          <p>Tumhari aankhon mein ek saaf khwaab hai, aur tum us khwaab ke peeche poori sincerity se daudti ho.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">07</span>
+          <h3>Sincerity</h3>
+          <p>Jo bhi karti ho, dil se karti ho. Yeh khoobi bohot kam logon mein hoti hai.</p>
+        </article>
+        <article class="special-card glass-card reveal">
+          <span class="special-num">08</span>
+          <h3>Future Doctor</h3>
+          <p>Tumhare andar pehle se hi ek doctor ki sabar, dard-mandi aur lagan maujood hai.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. PHOTO GALLERY ===================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">Yaadein &middot; Memories</p>
+      <h2 class="section-title reveal">Ek Chhoti Si Photo Gallery</h2>
+      <p class="section-intro reveal">Har tasveer ek kahani hai &mdash; har lamha sambhalne layak.</p>
+
+      <div class="gallery-grid">
+        <!-- 📸 REPLACE IMAGE HERE: swap each src with her real photos (keep same file names for simplicity) -->
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&q=80" alt="Memory one" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600&q=80" alt="Memory two" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Memory three" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80" alt="Memory four" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Memory five" loading="lazy">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600&q=80" alt="Memory six" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 8. FUTURE COUNTDOWN ===================== -->
+  <section class="countdown-section" id="countdown">
+    <div class="section-frame">
+      <p class="section-eyebrow reveal">Safar &middot; The Road Ahead</p>
+      <h2 class="section-title reveal">Aage Ka Safar</h2>
+
+      <div class="countdown-grid">
+        <div class="countdown-card glass-card reveal">
+          <p class="countdown-label">Birthday Mubarak</p>
+          <h3>7 July</h3>
+          <div class="countdown-timer" id="birthdayCountdown" data-target="07-07">
+            <div class="time-box"><span class="time-num" data-days>00</span><span class="time-label">Days</span></div>
+            <div class="time-box"><span class="time-num" data-hours>00</span><span class="time-label">Hrs</span></div>
+            <div class="time-box"><span class="time-num" data-minutes>00</span><span class="time-label">Min</span></div>
+            <div class="time-box"><span class="time-num" data-seconds>00</span><span class="time-label">Sec</span></div>
+          </div>
+        </div>
+
+        <div class="countdown-card glass-card reveal countdown-highlight">
+          <p class="countdown-label">Next Destination</p>
+          <h3>16 August &mdash; MDCAT</h3>
+          <div class="countdown-timer" id="mdcatCountdown" data-target="08-16">
+            <div class="time-box"><span class="time-num" data-days>00</span><span class="time-label">Days</span></div>
+            <div class="time-box"><span class="time-num" data-hours>00</span><span class="time-label">Hrs</span></div>
+            <div class="time-box"><span class="time-num" data-minutes>00</span><span class="time-label">Min</span></div>
+            <div class="time-box"><span class="time-num" data-seconds>00</span><span class="time-label">Sec</span></div>
+          </div>
+          <p class="countdown-footnote">Har second qareeb le ja raha hai tumhe tumhare khwaab ke.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 9. FINAL MESSAGE ===================== -->
+  <section class="final-section" id="final">
+    <div class="final-bg-cake" aria-hidden="true">
+      <div class="cake-3d">
+        <div class="cake-layer cake-layer-1"></div>
+        <div class="cake-layer cake-layer-2"></div>
+        <div class="cake-candle"><span class="flame"></span></div>
+      </div>
+    </div>
+    <div class="section-frame final-frame">
+      <p class="section-eyebrow reveal">Akhri Baat &middot; From The Heart</p>
+      <h2 class="section-title reveal">Happy Birthday, Future Dr Laiba Siddique</h2>
+      <div class="glass-card final-card reveal">
+        <p>
+          Aaj jashn hai tumhari mehnat ka, tumhari simplicity ka, aur us khwaab ka jo
+          tum din raat ek karke jee rahi ho. Tum sirf ek student nahi &mdash; tum ek
+          mustaqbil ki doctor ho, jo abhi se logon ki dua ban chuki hai.
+        </p>
+        <p>
+          16 August qareeb hai &mdash; ghabrana nahi. Allah ne tumhari har raat dekhi
+          hai, har sajda suna hai, har dua qabool kar li hai. Bas chalti raho,
+          confidently aur sabar ke saath.
+        </p>
+        <p class="final-emphasis">
+          Happy Birthday, Dr Laiba Siddique. <br>
+          May Allah grant you everything your sincere heart deserves. 🤍🤲
+        </p>
+      </div>
+      <button class="confetti-btn" id="confettiBtn">Celebrate 🎉</button>
+    </div>
+  </section>
+
+</main>
+
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<footer class="site-footer">
+  <p>Made with love, for Dr Laiba Siddique &middot; 7 July</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+                                 </html>
+              
